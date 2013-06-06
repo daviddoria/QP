@@ -8,20 +8,17 @@ The problem is in the form:
 
 min 0.5 * x G x + g0 x
 s.t.
-    CE^T x + ce0 = 0
-    CI^T x + ci0 >= 0
+    CE^T x + ce0 = 0  (E: equality constraint)
+    CI^T x + ci0 >= 0 (I: inequality constraint)
 	 
  The matrix and vectors dimensions are as follows:
-     G: n * n
-		g0: n
-				
-		CE: n * p
-	 ce0: p
-				
-	  CI: n * m
-   ci0: m
-
-     x: n
+     G:   n * n
+     g0:  n
+     CE:  n * p
+     ce0: p
+     CI:  n * m
+     ci0: m
+     x:   n
  
  The function will return the cost of the solution written in the x vector or
  std::numeric_limits::infinity() if the problem is infeasible. In the latter case
